@@ -1,0 +1,17 @@
+block:
+  golden-apples:
+    enabled: true
+    message: '&cGolden apples are disabled on this server!'
+    remove-item: true
+    block-crafting: true
+  god-apples:
+    enabled: false
+    message: '&cGod apples are disabled on this server!'
+    remove-item: true
+    block-crafting: true
+  knockback:
+    enabled: true
+  strength:
+    enabled: true
+    message: '&cStrenth potions are disabled on this server!'
+    remove-item: true

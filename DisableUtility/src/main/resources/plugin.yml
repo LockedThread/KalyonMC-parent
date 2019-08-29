@@ -1,0 +1,6 @@
+name: 'DisableUtility'
+version: '1.0-SNAPSHOT'
+main: 'dev.lockedthread.kalyonmc.disableutility.DisableUtility'
+author: 'LockedThread'
+description: 'A disable utility plugin for KalyonMC by LockedThread'
+website: 'www.lockedthread.dev'
