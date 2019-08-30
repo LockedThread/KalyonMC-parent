@@ -24,7 +24,6 @@ public class DisableUtility extends JavaPlugin {
 
     @Override
     public void onDisable() {
-
         instance = null;
     }
 }

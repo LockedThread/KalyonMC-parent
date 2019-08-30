@@ -10,7 +10,8 @@ import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.PotionMeta;
-import org.bukkit.potion.PotionEffectType;
+import org.bukkit.potion.Potion;
+import org.bukkit.potion.PotionType;
 
 public class BlockedItemListener implements Listener {
 
@@ -41,8 +42,7 @@ public class BlockedItemListener implements Listener {
             }
         } else if (item.getType() == Material.POTION) {
             if (item.getItemMeta() instanceof PotionMeta) {
-                PotionMeta potionMeta = (PotionMeta) item.getItemMeta();
-                if (potionMeta.hasCustomEffect(PotionEffectType.INCREASE_DAMAGE) && INSTANCE.getConfig().getBoolean("block.strength.enabled")) {
+                if (Potion.fromItemStack(item).getType() == PotionType.STRENGTH && INSTANCE.getConfig().getBoolean("block.strength.enabled")) {
                     event.setCancelled(true);
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&', INSTANCE.getConfig().getString("block.strength.message")));
                     if (INSTANCE.getConfig().getBoolean("block.strength.remove-item")) {
